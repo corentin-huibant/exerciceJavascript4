@@ -5,13 +5,19 @@
     <title>JavaScript - exercice 4</title>
   </head>
   <body>
+    <label for="nom">Nom : </label><input type="text" name="nom" id="nom"/>
+    <label for="prenom">Prénom : </label><input type="text" name="prenom" id="prenom"/>
+    <label for="ville">Ville : </label><input type="text" name="ville" id="ville"/>
+    <button name="valider" id="valider" onclick="valid();">Valider</button>
     <script>
-      var name, indiceOne='Nom : ', surName, indiceTwo='\nPrénom : ', city, indiceThree='\nVille : ', result;
-      name= prompt('saisissez votre nom :');
-      surName= prompt('saisissez votre prénom :');
-      city= prompt('saisissez le nom de votre ville');
-      result= indiceOne + name + indiceTwo + surName + indiceThree + city;
-      alert(result);
+    function valid() {
+      if (nom = document.getElementById("nom").value , prenom = document.getElementById("prenom").value , ville = document.getElementById("ville").value) {
+      alert("nom : " + nom + "\nPrénom : " + prenom + "\nVille : " + ville);
+      }
+      else {
+        alert("c'est faux !")
+      }
+    }
     </script>
   </body>
 </html>
